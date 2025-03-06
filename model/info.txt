@@ -1,0 +1,17 @@
+Este archivo contiene un modelo de Regresión Logística entrenado para clasificar polígonos como nuevos o existentes en función de características espaciales y geométricas.
+
+✔ Variables predictoras:
+
+Centroid_Distance: Distancia entre centroides de polígonos.
+neighbors_count: Número de polígonos vecinos cercanos.
+angle_difference: Diferencia angular entre polígonos adyacentes.
+combined_UOI: Índice unificado de solapamiento y unión.
+✔ Variable objetivo:
+
+es_nuevo → Indica si un polígono es nuevo (1) o existente (0).
+✔ Proceso:
+
+Carga y preprocesamiento → División en train/test y escalado de datos.
+Entrenamiento y optimización → Ajuste de hiperparámetros (C = 0.01, penalty = 'l1', solver = 'liblinear').
+Evaluación → Comparación de umbrales de clasificación (0.3, 0.5, 0.7, 0.85).
+Este modelo permite ajustar el umbral de decisión según el equilibrio deseado entre precisión y recall, optimizando la detección de polígonos nuevos. 
